@@ -38,6 +38,8 @@
 |------|----|-------|
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
+|image|text|
+|text|text|
 
 ### Association
 - belongs_to :group
