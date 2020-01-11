@@ -24,8 +24,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, add_index: true|
-|email|string|null: false, unique: true|
+|name|string|null: false, index: true|
 
 ### Association
 - has_many :groups, through: :group_users
