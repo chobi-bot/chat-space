@@ -37,8 +37,8 @@
   .chat-main__message-form
     %form.chat-main__message-form__edit-box
       .chat-main__message-form__edit-box__parent
-        %input.chat-main__message-form__edit-box__parent--input-text{:placeholder => 'type a message'}
+        %input.chat-main__message-form__edit-box__parent--input-text{placeholder: 'type a message'}
         %label.chat-main__message-form__edit-box__parent__image-att
           = icon('far','image', class: "chat-main__message-form__edit-box__parent__image-att--btn")
           %input.chat-main__message-form__edit-box__parent__image-att--input-image{type: "file"}
-        %input.chat-main__message-form__edit-box__parent--send-btn{:name => "commit", :type => "submit", :value => "Send"}
+        %input.chat-main__message-form__edit-box__parent--send-btn{name: "commit", type: "submit", value: "Send"}
