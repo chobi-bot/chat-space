@@ -1,0 +1,44 @@
+.chat-main
+  .chat-main__header
+    .chat-main__header__leftbox
+      .chat-main__header__leftbox--current-group
+        グループ名表示
+      .chat-main__header__leftbox--member--list
+        .chat-main__header__leftbox--member--list--member
+          Member : 
+        .chat-main__header__leftbox--member--list--member--name
+          nagahama
+    .chat-main__header__rightbox
+      .chat-main__header__rightbox--btn 
+        =link_to 'Edit', '#', class: "chat-main__header__rightbox--btn__Edit-link"
+  .chat-main__message-list
+    .chat-main__message-list__talk-userinfo
+      .chat-main__message-list__talk-userinfo__username
+        メンター
+      .chat-main__message-list__talk-userinfo__date
+        2019/01/15 15:50:02
+    .chat-main__message-list__talk
+      なんやこれ
+    .chat-main__message-list__talk-userinfo
+      .chat-main__message-list__talk-userinfo__username
+        メンター
+      .chat-main__message-list__talk-userinfo__date
+        2019/01/15 15:50:02
+    .chat-main__message-list__talk
+      view無理やろ
+    .chat-main__message-list__talk-userinfo
+      .chat-main__message-list__talk-userinfo__username
+        メンター
+      .chat-main__message-list__talk-userinfo__date
+        2019/01/15 15:50:02
+    .chat-main__message-list__talk
+      辛いぜ
+  
+  .chat-main__message-form
+    %form.chat-main__message-form__edit-box
+      .chat-main__message-form__edit-box__parent
+        %input.chat-main__message-form__edit-box__parent--input-text{:placeholder => 'type a message'}
+        %label.chat-main__message-form__edit-box__parent__image-att
+          = icon('far','image', class: "chat-main__message-form__edit-box__parent__image-att--btn")
+          %input.chat-main__message-form__edit-box__parent__image-att--input-image{type: "file"}
+        %input.chat-main__message-form__edit-box__parent--send-btn{:name => "commit", :type => "submit", :value => "Send"}

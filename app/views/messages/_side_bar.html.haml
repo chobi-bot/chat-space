@@ -1,0 +1,18 @@
+.chat-side
+  .side-header
+    .side-header__box
+      .side-header__box__user-name
+        nagahama
+      %ul.side-header__box__menu
+        %li.list
+          = link_to '#' do
+            = icon('fa', 'edit',class: 'icon')
+        %li.list
+          = link_to '#' do
+            = icon('fa', 'cog',class: 'icon')
+  .groups
+    = link_to '#', class:"group" do
+      %p.group__group-name
+        長浜
+      %p.group__latest-message
+        なんやねん

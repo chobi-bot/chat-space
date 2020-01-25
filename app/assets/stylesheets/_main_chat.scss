@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+
+
+.chat-main {
+  width: calc(100vw - 300px);
+  &__header {
+    background-color: white;
+    height: 100px;
+    border-bottom: solid 1px #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    &__leftbox {
+      margin-top: 35px;
+      &--current-group {
+        margin-bottom: 15px;
+      }
+      &--member--list {
+        display: flex;
+        color: #999999;
+        font-size: 1px;
+        &--member {
+          margin-right: 5px;
+        } /* --memberの閉じタグ */
+      } /* --member--listの閉じタグ */
+    } /* leftboxの閉じタグ */
+
+    &__rightbox {
+      margin-top: 28px;
+      width: 72px;
+      &--btn {
+      color: #38aef0;
+      font-size: 16px;
+      height: 40px;
+      border: solid 1px #38aef0;
+      line-height: 40px;
+      padding: 0 20px;
+      a:visited, a:hover, a:active { color: #38aef0; text-decoration: none}
+      &__Edit-link {
+        text-decoration: none;
+      }  /* Edit-linkの閉じタグ */
+      } /* btnの閉じタグ */
+    }  /* rightboxの閉じタグ */
+  }  /* headerの閉じタグ */
+
+  
+  &__message-list {
+    background-color: #fafafa;
+    height: calc(100vh - 100px - 90px);
+    padding: 35px 40px 46px;
+    &__talk-userinfo {
+      display: flex;
+      padding-bottom: 12px;
+      &__username {
+        font-weight: bold;
+        font-size: 16px;
+        color: #333333;
+        margin-right: 10px;
+      }
+      &__date {
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+    &__talk {
+      margin-bottom: 46px;
+    }
+  }
+
+  
+  &__message-form {
+    background-color: #d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+    &__edit-box {
+      &__parent {
+        position: relative;
+        width: 100%;
+        display: flex;
+
+        &--input-text {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+        }
+        &__image-att {
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 125px;
+          cursor: pointer;
+          &--input-image {
+            display: none;
+          }
+        }
+        &--send-btn {
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+          cursor: pointer;
+        }
+      } /* parentの閉じタグ */     
+    } /* edit-boxの閉じタグ */
+  }  /* message-listの閉じタグ */
+}   /* chatmainの閉じタグ */
