@@ -1,46 +1,44 @@
-.wrapper {
-  display: flex;
-}
-
-.chat-side {
-  height: 100vh;
+.side-bar {
   width: 300px;
-  background-color: #253141;
-  .side-header {
-    height: 100px;
+  &__header {
+    background-color: #253141;
     color: white;
+    height: 100px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    &__box {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      height: 20px;
-      font-weight: bold;
-      &__menu {
-        display: flex;
-        li {
-          margin-left: 5px;
-          a {
-            color: white;
-          }
-        }
+  }
+  &__header-box {
+    height: 20px;
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 20px;
+    &__menu{
+    display: flex;
+      &__btn-icon {
+        margin-left: 5px;
+        color: white;
       }
     }
   }
-  .groups {
+  &__group {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
-    padding: 20px;
-    box-sizing: border-box;
-    font-size: 15px;
-    margin-bottom: 5px;
-    .group {
-      color: white;
-      text-decoration: none;
-      margin-bottom: 40px;
-      font-size: 15px;
+    padding: 20px 20px 0;
+    &__list {
+      a { 
+        color: white; 
+        text-decoration: none
+      }
+      &__group-name {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__group-message {
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
     }
   }
 }

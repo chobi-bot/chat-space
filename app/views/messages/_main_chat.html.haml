@@ -12,33 +12,16 @@
       .chat-main__header__rightbox--btn 
         =link_to 'Edit', '#', class: "chat-main__header__rightbox--btn__Edit-link"
   .chat-main__message-list
-    .chat-main__message-list__talk-userinfo
-      .chat-main__message-list__talk-userinfo__username
-        メンター
-      .chat-main__message-list__talk-userinfo__date
-        2019/01/15 15:50:02
-    .chat-main__message-list__talk
-      なんやこれ
-    .chat-main__message-list__talk-userinfo
-      .chat-main__message-list__talk-userinfo__username
-        メンター
-      .chat-main__message-list__talk-userinfo__date
-        2019/01/15 15:50:02
-    .chat-main__message-list__talk
-      view無理やろ
-    .chat-main__message-list__talk-userinfo
-      .chat-main__message-list__talk-userinfo__username
-        メンター
-      .chat-main__message-list__talk-userinfo__date
-        2019/01/15 15:50:02
-    .chat-main__message-list__talk
-      辛いぜ
-  
+    .messages
+      = render @messages
+
   .chat-main__message-form
-    %form.chat-main__message-form__edit-box
+    = form_for [@group, @message] do |f|
       .chat-main__message-form__edit-box__parent
-        %input.chat-main__message-form__edit-box__parent--input-text{placeholder: 'type a message'}
-        %label.chat-main__message-form__edit-box__parent__image-att
-          = icon('far','image', class: "chat-main__message-form__edit-box__parent__image-att--btn")
-          %input.chat-main__message-form__edit-box__parent__image-att--input-image{type: "file"}
-        %input.chat-main__message-form__edit-box__parent--send-btn{name: "commit", type: "submit", value: "Send"}
+        = f.text_field :content, class: "chat-main__message-form__edit-box__parent--input-text", placeholder: 'type a message'
+        .chat-main__message-form__edit-box__parent__image-att
+          = f.label :image, class: "chat-main__message-form__edit-box__parent__image-att--btn" do
+            = icon('far', 'image', class: 'icon')
+            = f.file_field :image, class: 'chat-main__message-form__edit-box__parent__image-att--input-image'
+        
+        = f.submit 'Send', class: "chat-main__message-form__edit-box__parent--send-btn"

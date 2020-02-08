@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-}
+
 
 .wrapper {
   display: flex;
@@ -41,7 +41,10 @@
       border: solid 1px #38aef0;
       line-height: 40px;
       padding: 0 20px;
-      a:visited, a:hover, a:active { color: #38aef0; text-decoration: none}
+      a {
+        color: #38aef0;
+        text-decoration: none;
+      }
       &__Edit-link {
         text-decoration: none;
       }  /* Edit-linkの閉じタグ */
@@ -54,6 +57,31 @@
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
     padding: 35px 40px 46px;
+    overflow: scroll;
+    .messages {
+      .message {
+        padding-bottom: 40px;
+        &__upper-info{
+          color: #434a54;
+          font-size: 16px;
+          font-weight: bold;
+          display: flex;
+          margin-bottom: 10px;
+          &__user{
+            
+          }
+          &__date{
+            color: #999999;
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+
+
+
     &__talk-userinfo {
       display: flex;
       padding-bottom: 12px;
@@ -112,3 +140,4 @@
     } /* edit-boxの閉じタグ */
   }  /* message-listの閉じタグ */
 }   /* chatmainの閉じタグ */
+}
