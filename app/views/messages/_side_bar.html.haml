@@ -1,0 +1,20 @@
+.side-bar
+  .side-bar__header
+    .side-bar__header-box
+      %p.side-bar__header-box__user-name
+        = current_user.name
+      .side-bar__header-box__menu
+        .side-bar__header-box__menu__new-group
+          =link_to new_group_path do
+            = icon('fas','edit', class: "side-bar__header-box__menu__btn-icon")
+        .side-bar__header-box__menu__edit-user
+          =link_to edit_user_path(current_user) do
+            = icon('fas','cog', class: "side-bar__header-box__menu__btn-icon")
+  .side-bar__group
+    - current_user.groups.each do |group|
+      .side-bar__group__list
+        = link_to group_messages_path(group) do
+          .side-bar__group__list__group-name
+            = group.name
+          .side-bar__group__list__group-message
+            = group.show_last_message
