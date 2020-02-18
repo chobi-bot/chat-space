@@ -44,7 +44,6 @@ $(function(){
   e.preventDefault();
   var formData = new FormData(this);
   var url = $(this).attr('action')
-  last_message_id = $('.message:last').data("message-id");
   $.ajax({
     url: url,
     type: "POST",
@@ -66,7 +65,7 @@ $(function(){
   });
 
   var reloadMessages = function() {
-    last_message_id = $('.message:last').data("message-id");
+  const last_message_id = $('.message:last').data("message-id");
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -84,7 +83,7 @@ $(function(){
       }
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
