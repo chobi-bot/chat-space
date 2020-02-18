@@ -40,7 +40,7 @@ $(function(){
    };
  }
 
-  function animate() {
+  function scrollmessege () {
     $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
   }
 
@@ -60,7 +60,7 @@ $(function(){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('form')[0].reset();
-      animate();
+      scrollmessege();
       $('.new_message__submit-btn').prop("disabled",false)
     })
     .fail(function() {
@@ -83,7 +83,7 @@ $(function(){
         insertHTML += buildHTML(message)
       });
       $('.messages').append(insertHTML);
-      animate();
+      scrollmessege();
       }
     })
     .fail(function() {
