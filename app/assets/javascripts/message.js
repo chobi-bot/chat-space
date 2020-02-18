@@ -65,7 +65,7 @@ $(function(){
   });
 
   var reloadMessages = function() {
-  const last_message_id = $('.message:last').data("message-id");
+    const last_message_id = $('.message:last').data("message-id");
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -79,7 +79,7 @@ $(function(){
         insertHTML += buildHTML(message)
       });
       $('.messages').append(insertHTML);
-      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      $.animate( $('.messages'));
       }
     })
     .fail(function() {
