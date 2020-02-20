@@ -60,3 +60,6 @@
 #     # password: "please use keys"
 #   }
 server '52.197.208.224', user: 'ec2-user', roles: %w{app db web}
+set :ssh_options, {
+ keys: [File.expand_path('~/.ssh/ChatSpace.pem)')]
+}
