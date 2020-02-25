@@ -31,10 +31,12 @@ $(function() {
   }
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
+    var selected_users = [];
     $.ajax({
       type: "GET",
       url: "/users",
-      data: { keyword: input },
+      data: { keyword: input,
+              selected_users: selected_users},
       dataType: "json"
     })
       .done(function(users) {
@@ -70,18 +72,3 @@ $(function() {
       .remove();
   });
 });
-
-var input = $(this).val();
-var selected_users = [];
-// 削除ボタンに格納されているinputタグのクラスです
-$(".chat-group-user__selected_user_id").each(function(){
-  selected_users.push($(this).attr("value"));
-});
-$.ajax({
-  type: 'GET', 
-  url: '/users',
-  data: { keyword: input,
-          selected_users: selected_users
-         },
-  dataType: 'json'
-})
