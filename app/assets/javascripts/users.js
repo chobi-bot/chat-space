@@ -42,6 +42,7 @@ $(function() {
 
         if (users.length !== 0) {
           users.forEach(function(user) {
+            console.log(user)
             addUser(user);
           });
         } else if (input.length == 0) {
