@@ -3,7 +3,6 @@
     .side-bar__header-box
       %p.side-bar__header-box__user-name
         = current_user.name
-        = button_to "削除", user_path(current_user), method: :delete
       .side-bar__header-box__menu
         .side-bar__header-box__menu__new-group
           =link_to new_group_path do
