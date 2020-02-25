@@ -32,7 +32,7 @@ $(function() {
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
     var selected_users = [];
-    $(".data-user-id").each(function(){
+    $(".chat-group-user__btn--remove").each(function(){
       selected_users.push($(user-search-field).attr("value"));
     });
     $.ajax({
