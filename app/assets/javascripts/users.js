@@ -31,10 +31,9 @@ $(function() {
   }
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
-    var input = $(this).val();
     var selected_users = [];
     $(".chat-group-user__selected_user_id").each(function(){
-      selected_users.push($(this).attr("value"));
+      selected_users.push($(user-search-field).attr("value"));
     });
     $.ajax({
       type: "GET",
